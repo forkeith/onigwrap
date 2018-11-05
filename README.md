@@ -49,6 +49,27 @@ Copy `onigwrap.dll` to the folder with your binary. (For example, `OnigRegexTest
 
 TODO: rename to `libonigwrap.dll` so PInvoke can be used without an extension cross platform - `[DllImport("libonigwrap")]` https://github.com/dotnet/corefx/issues/24444#issuecomment-334550197
 
+```powershell
+(New-Object System.Net.WebClient).DownloadFile("https://github.com/k-takata/Onigmo/archive/master.zip", (Join-Path $pwd "onigmo-master.zip"))
+Expand-Archive onigmo-master.zip -DestinationPath .
+cd Onigmo-master
+cp win32/Makefile
+cp win32/config.h
+#%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
+# https://stackoverflow.com/a/2124759/4473405
+& %comspec% /c '"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"&set' |
+    foreach {
+        if ($_ -match "(.*?)=(.*)") {
+            Set-Item -force -path "ENV:\$($matches[1])" -value "$($matches[2])"
+        }
+    }
+nmake
+cp build_x64/onigmo_s.lib ../onigwrap/onig_s.lib
+cp onigmo.h ../onigwrap/oniguruma.h
+cd ../onigwrap/
+cl.exe /DONIG_EXTERN=extern /D_USRDLL /D_WINDLL onigwrap.c /link /LTCG onig_s.lib /DLL /OUT:libonigwrap.dll
+```
+
 Linux
 -----
 
