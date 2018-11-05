@@ -47,6 +47,8 @@ With the `onigwrap` folder as your working dir, build onigwrap:
 
 Copy `onigwrap.dll` to the folder with your binary. (For example, `OnigRegexTests/bin/Debug` and `OnigWrapConsoleTest/bin/Debug`.)
 
+TODO: rename to `libonigwrap.dll` so PInvoke can be used without an extension cross platform - `[DllImport("libonigwrap")]` https://github.com/dotnet/corefx/issues/24444#issuecomment-334550197
+
 Linux
 -----
 
@@ -59,5 +61,17 @@ Copy `.libs/libonig.a` to the `onigwrap` folder.
 Build onigwrap:
 
 `gcc -shared -fPIC onigwrap.c libonig.a -o libonigwrap.so`
+
+```sh
+wget -O onigmo-master.zip https://github.com/k-takata/Onigmo/archive/master.zip
+unzip onigmo-master.zip
+cd Onigmo-master
+./configure "CFLAGS=-fPIC"
+make
+cp .libs/libonigmo.a ../onigwrap/libonig.a
+cp onigmo.h ../onigwrap/oniguruma.h
+cd ../onigwrap/
+gcc -shared -fPIC onigwrap.c libonig.a -o libonigwrap.so
+```
 
 Copy `libonigwrap.so` alongside your binary.
