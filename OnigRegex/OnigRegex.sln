@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "onigwrap", "onigwrap", "{E9
 		..\onigwrap\onigwrap.h = ..\onigwrap\onigwrap.h
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnigRegex", "..\OnigRegexStd\OnigRegex.csproj", "{85AD8E6F-D10D-4781-B778-F7B7BA73E528}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnigRegex", "OnigRegex.csproj", "{85AD8E6F-D10D-4781-B778-F7B7BA73E528}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnigWrapConsole", "OnigWrapConsole\OnigWrapConsole.csproj", "{7047BBF6-A0ED-44B2-A8A6-DBA7ECCE3652}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnigWrapConsole", "..\OnigWrapConsole\OnigWrapConsole.csproj", "{7047BBF6-A0ED-44B2-A8A6-DBA7ECCE3652}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnigRegexTests", "OnigRegexTests\OnigRegexTests.csproj", "{A79863C3-7DFD-43A2-AE7D-79687FFEBABC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnigRegexTests", "..\OnigRegexTests\OnigRegexTests.csproj", "{A79863C3-7DFD-43A2-AE7D-79687FFEBABC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

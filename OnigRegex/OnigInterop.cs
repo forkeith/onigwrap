@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace OnigRegex
 {
-    internal unsafe class OnigInterop
+    internal class OnigInterop
     {
         [DllImport("libonigwrap", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         internal static extern IntPtr onigwrap_create(string pattern, int len, int ignoreCase, int multiline);

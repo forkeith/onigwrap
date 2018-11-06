@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\OnigRegexStd\OnigRegex.csproj" />
+    <ProjectReference Include="..\OnigRegex\OnigRegex.csproj" />
   </ItemGroup>
 
 </Project>
