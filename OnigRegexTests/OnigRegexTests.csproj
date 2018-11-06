@@ -53,12 +53,6 @@
     <Compile Include="OnigRegexTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\OnigRegex\OnigRegex.csproj">
-      <Project>{d4e020b4-1a5a-4cc3-912c-96ff5d37f4c8}</Project>
-      <Name>OnigRegex</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

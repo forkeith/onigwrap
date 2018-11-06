@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.22609.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnigRegex", "OnigRegex.csproj", "{D4E020B4-1A5A-4CC3-912C-96FF5D37F4C8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnigRegexTests", "..\OnigRegexTests\OnigRegexTests.csproj", "{5D5EF2C9-72D9-43A3-9F5F-F83779B4E2D5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "onigwrap", "onigwrap", "{E921A3CA-5182-4D58-AE23-BD74F63FAF54}"
 	ProjectSection(SolutionItems) = preProject
 		..\onigwrap\onigwrap.c = ..\onigwrap\onigwrap.c
 		..\onigwrap\onigwrap.h = ..\onigwrap\onigwrap.h
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnigWrapConsoleTest", "..\OnigWrapConsoleTest\OnigWrapConsoleTest.csproj", "{CA1C0F75-99EC-4960-9224-509DBA671812}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnigRegex", "..\OnigRegexStd\OnigRegex.csproj", "{85AD8E6F-D10D-4781-B778-F7B7BA73E528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnigWrapConsole", "OnigWrapConsole\OnigWrapConsole.csproj", "{7047BBF6-A0ED-44B2-A8A6-DBA7ECCE3652}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnigRegexTests", "OnigRegexTests\OnigRegexTests.csproj", "{A79863C3-7DFD-43A2-AE7D-79687FFEBABC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,21 +21,24 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D4E020B4-1A5A-4CC3-912C-96FF5D37F4C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4E020B4-1A5A-4CC3-912C-96FF5D37F4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4E020B4-1A5A-4CC3-912C-96FF5D37F4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4E020B4-1A5A-4CC3-912C-96FF5D37F4C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D5EF2C9-72D9-43A3-9F5F-F83779B4E2D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D5EF2C9-72D9-43A3-9F5F-F83779B4E2D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D5EF2C9-72D9-43A3-9F5F-F83779B4E2D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D5EF2C9-72D9-43A3-9F5F-F83779B4E2D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA1C0F75-99EC-4960-9224-509DBA671812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA1C0F75-99EC-4960-9224-509DBA671812}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA1C0F75-99EC-4960-9224-509DBA671812}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA1C0F75-99EC-4960-9224-509DBA671812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85AD8E6F-D10D-4781-B778-F7B7BA73E528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85AD8E6F-D10D-4781-B778-F7B7BA73E528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85AD8E6F-D10D-4781-B778-F7B7BA73E528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85AD8E6F-D10D-4781-B778-F7B7BA73E528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7047BBF6-A0ED-44B2-A8A6-DBA7ECCE3652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7047BBF6-A0ED-44B2-A8A6-DBA7ECCE3652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7047BBF6-A0ED-44B2-A8A6-DBA7ECCE3652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7047BBF6-A0ED-44B2-A8A6-DBA7ECCE3652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A79863C3-7DFD-43A2-AE7D-79687FFEBABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A79863C3-7DFD-43A2-AE7D-79687FFEBABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A79863C3-7DFD-43A2-AE7D-79687FFEBABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A79863C3-7DFD-43A2-AE7D-79687FFEBABC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBB50D5D-49A0-4104-B6D3-5D6605069719}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = OnigRegex.csproj
